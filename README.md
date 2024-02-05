@@ -10,7 +10,6 @@ Use the provided Python script to extract EOG data from the downloaded .edf file
 eogtocsv.py
 
 python
-Copy code
 import numpy as np
 import mne
 from mne.io import read_raw_edf
