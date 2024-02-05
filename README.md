@@ -4,6 +4,7 @@ Create a pygame simulation that transforms EOG (Electrooculography) data into a 
 
 Step 1: Download EDF File
 Download the required .edf file from PhysioNet.
+https://physionet.org/content/sleep-edfx/1.0.0/sleep-cassette/#files-panel
 
 Step 2: Extract EOG Data
 Use the provided Python script to extract EOG data from the downloaded .edf file. The script utilizes the MNE library to process the data and save it to a CSV file.
