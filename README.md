@@ -30,8 +30,7 @@ print("Horizontal EOG data saved to 'eogdata.csv'")
 Output
 The script generates a CSV file ('eogdata.csv') with columns 'Time' and 'EOG Horizontal'. Example output:
 
-css
-Copy code
+csv output data
 Time,EOG Horizontal
 0.0,1.650866910866916e-05
 0.01,1.601587301587307e-05
@@ -42,7 +41,9 @@ Time,EOG Horizontal
 0.06,2.463980463980988e-07
 Pygame Simulation
 Now, use the extracted EOG data to create a pygame simulation that visually represents the information. Implement your simulation code and visualize the changes in the EOG data over time.
-
+ example simulation 
+eyeview1color.py
+ 
 Feel free to customize the visualization to make it more engaging and informative.
 
 Instructions
