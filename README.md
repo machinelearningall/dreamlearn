@@ -1,31 +1,37 @@
-2/5/24 challenge 
+Pygame EOG Visualization Challenge - 2/5/24
+Overview
+Create a pygame simulation that transforms EOG (Electrooculography) data into a visual representation. Follow the steps below to set up the project.
 
-create a pygame simulation that turns into a visual 
+Step 1: Download EDF File
+Download the required .edf file from PhysioNet.
 
-STEP ONE download .edf file here https://physionet.org/content/sleep-edfx/1.0.0/sleep-cassette/#files-panel
+Step 2: Extract EOG Data
+Use the provided Python script to extract EOG data from the downloaded .edf file. The script utilizes the MNE library to process the data and save it to a CSV file.
 
-STEP TWO extract eog data from .edf file
-
+python
+Copy code
 import numpy as np
 import mne
 from mne.io import read_raw_edf
-import pandas as pd  # Import pandas for CSV handling
+import pandas as pd
 
- Load EDF file
+# Load EDF file
 edf_file = 'SC4001E0-PSG.edf'
 raw = read_raw_edf(edf_file, preload=True)
 
- Pick the horizontal EOG channel
+# Pick the horizontal EOG channel
 eog_data, times = raw.copy().pick_channels(['EOG horizontal']).get_data(return_times=True)
 
- Save EOG data to CSV
+# Save EOG data to CSV
 eog_df = pd.DataFrame(data={'Time': times, 'EOG Horizontal': eog_data[0, :]})
 eog_df.to_csv('eogdata.csv', index=False)
 
 print("Horizontal EOG data saved to 'eogdata.csv'")
+Output
+The script generates a CSV file ('eogdata.csv') with columns 'Time' and 'EOG Horizontal'. Example output:
 
-OUTPUT
-
+css
+Copy code
 Time,EOG Horizontal
 0.0,1.650866910866916e-05
 0.01,1.601587301587307e-05
@@ -34,9 +40,15 @@ Time,EOG Horizontal
 0.04,7.63833943833949e-06
 0.05,2.710378510378563e-06
 0.06,2.463980463980988e-07
-0.07,-7.391941391940868e-07
+Pygame Simulation
+Now, use the extracted EOG data to create a pygame simulation that visually represents the information. Implement your simulation code and visualize the changes in the EOG data over time.
 
-CREATE SIMULATION 
-eyeview1color.py
+Feel free to customize the visualization to make it more engaging and informative.
 
+Instructions
+Download the EDF file.
+Run the provided Python script to extract EOG data.
+Create a pygame simulation using the extracted data.
+Customize and enhance the visualization as desired.
+Good luck with the challenge!
 
