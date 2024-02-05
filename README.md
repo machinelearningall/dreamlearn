@@ -1,6 +1,9 @@
 2/5/24 challenge 
+
 create a pygame simulation that turns into a visual 
+
 STEP ONE download .edf file here https://physionet.org/content/sleep-edfx/1.0.0/sleep-cassette/#files-panel
+
 STEP TWO extract eog data from .edf file
 
 import numpy as np
@@ -33,6 +36,7 @@ Time,EOG Horizontal
 0.06,2.463980463980988e-07
 0.07,-7.391941391940868e-07
 
-
+CREATE SIMULATION 
+eyeview1color.py
 
 
