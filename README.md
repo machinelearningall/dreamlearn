@@ -7,6 +7,7 @@ Download the required .edf file from PhysioNet.
 
 Step 2: Extract EOG Data
 Use the provided Python script to extract EOG data from the downloaded .edf file. The script utilizes the MNE library to process the data and save it to a CSV file.
+eogtocsv.py
 
 python
 Copy code
